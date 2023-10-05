@@ -12,9 +12,10 @@
   </div>
   {% endif %}
   {% if error == True %}
-  {% for error in errors %}
+  {% for error in errors %} 
+  <!-- why wont red show words -->
   <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin-top: 1rem;">
-    <strong>{{error}}
+    <strong>{{errors}}
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -23,7 +24,7 @@
   {% endif %}
   
 <form method="POST">
-    <p class="text-muted">Note * : Title Should be Capital</p>
+    <p class="text-muted">Note * : Title Should be Capital !</p>
     {% csrf_token %}
     {{form.as_ul}}
     <button type="submit" class="btn btn-primary" style="margin: 1rem auto 0 auto;display: block;">Submit</button>
